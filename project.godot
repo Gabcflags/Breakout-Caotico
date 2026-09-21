@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="breakout-Caotico"
+config/name="New Game Project"
+run/main_scene="uid://2yvq6yiiep7y"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Textures/icon.svg"
 
 [display]
 
