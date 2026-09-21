@@ -1,30 +1,17 @@
-[gd_scene format=3 uid="uid://5mevh4s7cpy1"]
-
-[ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_5ydob"]
+[gd_scene format=3 uid="uid://dq7qxcm2dm1b2"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mq8aq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51fql"]
 size = Vector2(90, 18)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq8aq"]
-size = Vector2(90, 18)
-
 [node name="jugador" type="CharacterBody2D" unique_id=1410336467]
-script = ExtResource("1_5ydob")
+position = Vector2(548, 589)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=680156695]
+position = Vector2(4.7683716e-07, 9.536743e-07)
 scale = Vector2(90.000015, 18.000002)
 texture = SubResource("CanvasTexture_mq8aq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1077960990]
 shape = SubResource("RectangleShape2D_51fql")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1868442240]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=548106643]
-shape = SubResource("RectangleShape2D_mq8aq")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
