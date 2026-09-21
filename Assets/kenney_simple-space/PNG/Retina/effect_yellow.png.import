@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://eaxkav74sk8t"
 path="res://.godot/imported/effect_yellow.png-dfacb8302d5c0edce0513f3b8b85e526.ctex"
+=======
+uid="uid://2ri7klno42e2"
+path="res://.godot/imported/effect_yellow.png-5f64d9a2439a18a6b344f1ab9af3ee23.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/kenney_simple-space/PNG/Retina/effect_yellow.png"
 dest_files=["res://.godot/imported/effect_yellow.png-dfacb8302d5c0edce0513f3b8b85e526.ctex"]
+=======
+source_file="res://kenney_simple-space/PNG/Retina/effect_yellow.png"
+dest_files=["res://.godot/imported/effect_yellow.png-5f64d9a2439a18a6b344f1ab9af3ee23.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

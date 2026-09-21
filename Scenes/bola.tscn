@@ -1,22 +1,12 @@
-[gd_scene format=3 uid="uid://ln584mp7sdax"]
+[gd_scene format=3 uid="uid://d2ibegpg3o408"]
 
-[ext_resource type="Texture2D" path="res://Assets/kenney_simple-space/PNG/Default/meteor_large.png" id="1_c0eli"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5mbwn"]
-friction = 0.02
-bounce = 1.0
-
-[sub_resource type="GDScript" id="GDScript_17s4t"]
+[ext_resource type="Texture2D" uid="uid://mb1g4mq56gl7" path="res://kenney_simple-space/PNG/Default/meteor_large.png" id="1_c0eli"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fi5v2"]
-radius = 25.0
+radius = 23.086792
 
 [node name="bola" type="RigidBody2D" unique_id=1359927917]
-position = Vector2(580, 326)
-mass = 1.053
-physics_material_override = SubResource("PhysicsMaterial_5mbwn")
-gravity_scale = 1.074
-script = SubResource("GDScript_17s4t")
+position = Vector2(564, 332)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=885942004]
 texture = ExtResource("1_c0eli")

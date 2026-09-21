@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d34xbwbv1f2yj"
 path="res://.godot/imported/star_medium.png-0b61d8dc46fa6333daf1200e76ce8f5a.ctex"
+=======
+uid="uid://8t3ro3yvkpp8"
+path="res://.godot/imported/star_medium.png-4774e349f1e93ea459f128d1ee28d8d3.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/kenney_simple-space/PNG/Retina/star_medium.png"
 dest_files=["res://.godot/imported/star_medium.png-0b61d8dc46fa6333daf1200e76ce8f5a.ctex"]
+=======
+source_file="res://kenney_simple-space/PNG/Retina/star_medium.png"
+dest_files=["res://.godot/imported/star_medium.png-4774e349f1e93ea459f128d1ee28d8d3.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

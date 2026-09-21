@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://nvd56uiolko5"
 path="res://.godot/imported/enemy_C.png-d61fdd02ce8c1536a92f46adb3ec96ee.ctex"
+=======
+uid="uid://csnwvw163yc3w"
+path="res://.godot/imported/enemy_C.png-f78080057b9bdca04fd78ff295f73569.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/kenney_simple-space/PNG/Default/enemy_C.png"
 dest_files=["res://.godot/imported/enemy_C.png-d61fdd02ce8c1536a92f46adb3ec96ee.ctex"]
+=======
+source_file="res://kenney_simple-space/PNG/Default/enemy_C.png"
+dest_files=["res://.godot/imported/enemy_C.png-f78080057b9bdca04fd78ff295f73569.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

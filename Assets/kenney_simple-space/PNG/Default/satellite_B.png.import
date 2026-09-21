@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://68smpd6vo3ky"
 path="res://.godot/imported/satellite_B.png-3d4a3d769e364f1c3836ea6edb0c43c9.ctex"
+=======
+uid="uid://csfrkwqmjipmr"
+path="res://.godot/imported/satellite_B.png-ee4249ed55dde81d851b6c7a816584f2.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/kenney_simple-space/PNG/Default/satellite_B.png"
 dest_files=["res://.godot/imported/satellite_B.png-3d4a3d769e364f1c3836ea6edb0c43c9.ctex"]
+=======
+source_file="res://kenney_simple-space/PNG/Default/satellite_B.png"
+dest_files=["res://.godot/imported/satellite_B.png-ee4249ed55dde81d851b6c7a816584f2.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

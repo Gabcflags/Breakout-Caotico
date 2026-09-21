@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cjlknmkcoig55"
 path="res://.godot/imported/icon_exclamationSmall.png-8946fff9fb5c1e5b72e0d067303ae34e.ctex"
+=======
+uid="uid://dlf13swdu5vsl"
+path="res://.godot/imported/icon_exclamationSmall.png-9ec0a3046145a3d58dcbda3036cecb06.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/kenney_simple-space/PNG/Default/icon_exclamationSmall.png"
 dest_files=["res://.godot/imported/icon_exclamationSmall.png-8946fff9fb5c1e5b72e0d067303ae34e.ctex"]
+=======
+source_file="res://kenney_simple-space/PNG/Default/icon_exclamationSmall.png"
+dest_files=["res://.godot/imported/icon_exclamationSmall.png-9ec0a3046145a3d58dcbda3036cecb06.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 
