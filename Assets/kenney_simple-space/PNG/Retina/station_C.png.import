@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://b3wwxkaxrjmdy"
+path="res://.godot/imported/station_C.png-a2bd9cf6e719b0bb13d6b2f04789db7d.ctex"
+=======
 uid="uid://vfdxwnjqh8lo"
 path="res://.godot/imported/station_C.png-8cd1bdcb3d1def8f9d477ab35feca7f2.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Retina/station_C.png"
+dest_files=["res://.godot/imported/station_C.png-a2bd9cf6e719b0bb13d6b2f04789db7d.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Retina/station_C.png"
 dest_files=["res://.godot/imported/station_C.png-8cd1bdcb3d1def8f9d477ab35feca7f2.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://klfe7sevscx3"
+path="res://.godot/imported/simpleSpace_tilesheet.png-1575a032bf6b0676693440c3a99e098f.ctex"
+=======
 uid="uid://x3nr6ki7hp6y"
 path="res://.godot/imported/simpleSpace_tilesheet.png-1a9747d7e9689045726b3fe342880129.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/Tilesheet/simpleSpace_tilesheet.png"
+dest_files=["res://.godot/imported/simpleSpace_tilesheet.png-1575a032bf6b0676693440c3a99e098f.ctex"]
+=======
 source_file="res://kenney_simple-space/Tilesheet/simpleSpace_tilesheet.png"
 dest_files=["res://.godot/imported/simpleSpace_tilesheet.png-1a9747d7e9689045726b3fe342880129.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

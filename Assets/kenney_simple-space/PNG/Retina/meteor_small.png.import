@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://bmaedtvaj5000"
+path="res://.godot/imported/meteor_small.png-2b215bceca9c993163b43353932ba2ee.ctex"
+=======
 uid="uid://buqpvcr8w6ypr"
 path="res://.godot/imported/meteor_small.png-0aa3179a537b98c54723becd074f77e5.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Retina/meteor_small.png"
+dest_files=["res://.godot/imported/meteor_small.png-2b215bceca9c993163b43353932ba2ee.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Retina/meteor_small.png"
 dest_files=["res://.godot/imported/meteor_small.png-0aa3179a537b98c54723becd074f77e5.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

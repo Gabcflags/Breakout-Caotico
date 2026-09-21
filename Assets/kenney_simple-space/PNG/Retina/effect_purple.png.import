@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://rwpljq6i836y"
+path="res://.godot/imported/effect_purple.png-8896141a3a9344604de1ff0540a5edad.ctex"
+=======
 uid="uid://bi52dx7ywykbo"
 path="res://.godot/imported/effect_purple.png-df33b2e41d5dbed6926c5a318b30e23f.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Retina/effect_purple.png"
+dest_files=["res://.godot/imported/effect_purple.png-8896141a3a9344604de1ff0540a5edad.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Retina/effect_purple.png"
 dest_files=["res://.godot/imported/effect_purple.png-df33b2e41d5dbed6926c5a318b30e23f.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

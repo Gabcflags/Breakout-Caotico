@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://cwqktromocs6t"
+path="res://.godot/imported/icon_plusSmall.png-efaf2426e6d2c9e394b960368bab50d2.ctex"
+=======
 uid="uid://idbp8nfs4kmg"
 path="res://.godot/imported/icon_plusSmall.png-fe46df8e7a61e673b194007902ae5429.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Retina/icon_plusSmall.png"
+dest_files=["res://.godot/imported/icon_plusSmall.png-efaf2426e6d2c9e394b960368bab50d2.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Retina/icon_plusSmall.png"
 dest_files=["res://.godot/imported/icon_plusSmall.png-fe46df8e7a61e673b194007902ae5429.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

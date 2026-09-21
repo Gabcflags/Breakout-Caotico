@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://dfl213yugphu7"
+path="res://.godot/imported/icon_crossSmall.png-5a1c8ff133090c332df07526011beadd.ctex"
+=======
 uid="uid://dm6v8y6s6dk3d"
 path="res://.godot/imported/icon_crossSmall.png-72c29f87304291cd0fcc033b5b44203d.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Default/icon_crossSmall.png"
+dest_files=["res://.godot/imported/icon_crossSmall.png-5a1c8ff133090c332df07526011beadd.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Default/icon_crossSmall.png"
 dest_files=["res://.godot/imported/icon_crossSmall.png-72c29f87304291cd0fcc033b5b44203d.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+[gd_scene format=3 uid="uid://5mevh4s7cpy1"]
+
+[ext_resource type="Script" uid="uid://vajvwmvfhci6" path="res://Scripts/jugador.gd" id="1_5ydob"]
+=======
 [gd_scene format=3 uid="uid://dq7qxcm2dm1b2"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mq8aq"]
 

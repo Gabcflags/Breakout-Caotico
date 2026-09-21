@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://cie5hf4epkcyd"
+path="res://.godot/imported/star_large.png-da4e2005c7147a4a7b112bd231354fe7.ctex"
+=======
 uid="uid://d2jahfg4v17mi"
 path="res://.godot/imported/star_large.png-7ff70ff264b110388f057fa841dc78c6.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Default/star_large.png"
+dest_files=["res://.godot/imported/star_large.png-da4e2005c7147a4a7b112bd231354fe7.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Default/star_large.png"
 dest_files=["res://.godot/imported/star_large.png-7ff70ff264b110388f057fa841dc78c6.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://dpmtnovgoqu1s"
+path="res://.godot/imported/ship_G.png-ac4606c3968afa21c2896b6056d1388b.ctex"
+=======
 uid="uid://xt42exol1xhl"
 path="res://.godot/imported/ship_G.png-fbea88e286c3fcc9de3d171c13c85ccb.ctex"
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://Assets/kenney_simple-space/PNG/Default/ship_G.png"
+dest_files=["res://.godot/imported/ship_G.png-ac4606c3968afa21c2896b6056d1388b.ctex"]
+=======
 source_file="res://kenney_simple-space/PNG/Default/ship_G.png"
 dest_files=["res://.godot/imported/ship_G.png-fbea88e286c3fcc9de3d171c13c85ccb.ctex"]
+>>>>>>> 8667d11a24c878ee40905900326e7b951554320c
 
 [params]
 
