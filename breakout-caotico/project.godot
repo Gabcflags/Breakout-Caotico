@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="breakout-Caotico"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/name="breakout-caotico"
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
@@ -26,3 +26,6 @@ window/stretch/aspect="expand"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.003142938, 0.1340355, 0.2609476, 1)
