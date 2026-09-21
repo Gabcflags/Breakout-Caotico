@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5mevh4s7cpy1"]
 
-[ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_5ydob"]
+[ext_resource type="Script" uid="uid://vajvwmvfhci6" path="res://Scripts/jugador.gd" id="1_5ydob"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mq8aq"]
 

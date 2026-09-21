@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bnk7ajgxgd6qh"]
 
-[ext_resource type="PackedScene" path="res://Scenes/jugador.tscn" id="1_43avb"]
-[ext_resource type="Script" path="res://Scripts/caja.gd" id="1_c8nnm"]
-[ext_resource type="PackedScene" path="res://Scenes/bola.tscn" id="2_qfw4h"]
+[ext_resource type="PackedScene" uid="uid://5mevh4s7cpy1" path="res://Scenes/jugador.tscn" id="1_43avb"]
+[ext_resource type="Script" uid="uid://8gct7p82y26b" path="res://Scripts/caja.gd" id="1_c8nnm"]
+[ext_resource type="PackedScene" uid="uid://ln584mp7sdax" path="res://Scenes/bola.tscn" id="2_qfw4h"]
 [ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="2_scb3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mq8aq"]
@@ -62,8 +62,6 @@ shape = SubResource("RectangleShape2D_fi5v2")
 position = Vector2(571, 600)
 
 [node name="bola" parent="." unique_id=1359927917 instance=ExtResource("2_qfw4h")]
-mass = 0.059
-script = null
 
 [connection signal="body_entered" from="AreaArriba" to="." method="_on_area_arriba_body_entered"]
 [connection signal="body_entered" from="AreaIzquierda" to="." method="_on_area_izquierda_body_entered"]
