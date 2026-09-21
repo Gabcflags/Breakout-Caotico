@@ -1,33 +1,92 @@
 [gd_scene format=3 uid="uid://2yvq6yiiep7y"]
 
+[ext_resource type="Texture2D" uid="uid://chaa7wtca5mur" path="res://Assets/Textures/moon.png" id="1_48xlc"]
+[ext_resource type="Script" uid="uid://bgtxh7irye2s5" path="res://Scripts/MainMenuEffetcs.gd" id="1_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="2_1ehe0"]
+[ext_resource type="FontFile" uid="uid://cqfsroobb1qdn" path="res://Assets/Textures/Fonts/DeathStar-VmWB.ttf" id="3_1ehe0"]
+[ext_resource type="Script" uid="uid://bywm1uy5xqpq6" path="res://Scripts/MainMenuButtoms.gd" id="4_n45e2"]
+
+[sub_resource type="Theme" id="Theme_ce3w2"]
+default_font = ExtResource("3_1ehe0")
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_n45e2"]
+default_font = ExtResource("3_1ehe0")
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_opfnp"]
+default_font = ExtResource("3_1ehe0")
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_48xlc"]
+default_font = ExtResource("3_1ehe0")
+default_font_size = 51
+
 [node name="MainMenu" type="Node2D" unique_id=1490434045]
 
-[node name="Buttom_Manager" type="Control" parent="." unique_id=273309489]
+[node name="Control" type="Control" parent="." unique_id=1936705404]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_ce3w2")
 
-[node name="Start" type="Button" parent="Buttom_Manager" unique_id=1353274988]
+[node name="Background" type="Sprite2D" parent="Control" unique_id=1854110247]
+position = Vector2(570.00006, 318.00003)
+scale = Vector2(0.6033733, 0.6033733)
+texture = ExtResource("2_1ehe0")
+
+[node name="Moon" type="Sprite2D" parent="Control" unique_id=1795467281]
+position = Vector2(217.99994, 205.99994)
+rotation = 0.7793142
+scale = Vector2(0.10817705, 0.10817705)
+texture = ExtResource("1_48xlc")
+
+[node name="Buttom_Manager" type="Control" parent="Control" unique_id=273309489]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_n45e2")
+
+[node name="Start" type="Button" parent="Control/Buttom_Manager" unique_id=1353274988]
 layout_mode = 0
 offset_left = 412.0
-offset_top = 135.0
+offset_top = 203.0
 offset_right = 756.0
-offset_bottom = 224.0
+offset_bottom = 292.0
+theme = SubResource("Theme_ce3w2")
 text = "Empezar"
 
-[node name="Start2" type="Button" parent="Buttom_Manager" unique_id=978588196]
+[node name="Start2" type="Button" parent="Control/Buttom_Manager" unique_id=978588196]
 layout_mode = 0
 offset_left = 412.0
-offset_top = 249.0
+offset_top = 317.0
 offset_right = 756.0
-offset_bottom = 338.0
+offset_bottom = 406.0
+theme = SubResource("Theme_n45e2")
 text = "Opciones"
 
-[node name="Start3" type="Button" parent="Buttom_Manager" unique_id=292321923]
+[node name="Start3" type="Button" parent="Control/Buttom_Manager" unique_id=292321923]
 layout_mode = 0
 offset_left = 412.0
-offset_top = 359.0
+offset_top = 427.0
 offset_right = 756.0
-offset_bottom = 448.0
+offset_bottom = 516.0
+theme = SubResource("Theme_opfnp")
 text = "Salir"
+
+[node name="Label" type="Label" parent="Control/Buttom_Manager" unique_id=754138202]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 21.0
+offset_right = 785.0
+offset_bottom = 164.0
+theme = SubResource("Theme_48xlc")
+text = "BREAKOUT
+CAOTICO!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/Buttom_Manager/Start" to="Control/Buttom_Manager" method="_on_start_pressed"]
+[connection signal="pressed" from="Control/Buttom_Manager/Start2" to="Control/Buttom_Manager" method="_on_start_2_pressed"]
+[connection signal="pressed" from="Control/Buttom_Manager/Start3" to="Control/Buttom_Manager" method="_on_start_3_pressed"]

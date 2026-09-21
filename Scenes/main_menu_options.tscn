@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cw0a2uc4etusv"]
+
+[ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="2_p23ep"]
+[ext_resource type="Texture2D" uid="uid://chaa7wtca5mur" path="res://Assets/Textures/moon.png" id="3_jwilq"]
+
+[node name="MainMenuOptions" type="Node2D" unique_id=1474950781]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=950612529]
+position = Vector2(570.00006, 318.00003)
+scale = Vector2(0.6033733, 0.6033733)
+texture = ExtResource("2_p23ep")
+
+[node name="Moon" type="Sprite2D" parent="." unique_id=2013074772]
+position = Vector2(100.999985, 86.999985)
+rotation = 0.7793142
+scale = Vector2(0.052815147, 0.052815147)
+texture = ExtResource("3_jwilq")
