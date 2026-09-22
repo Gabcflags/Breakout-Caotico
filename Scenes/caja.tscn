@@ -1,70 +1,73 @@
-[gd_scene format=3 uid="uid://dkxoffr3bol5p"]
+[gd_scene format=3 uid="uid://bqyqvv5071kuj"]
 
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://5mevh4s7cpy1" path="res://Scenes/jugador.tscn" id="1_43avb"]
-[ext_resource type="Script" uid="uid://8gct7p82y26b" path="res://Scripts/caja.gd" id="1_c8nnm"]
-[ext_resource type="PackedScene" uid="uid://ln584mp7sdax" path="res://Scenes/bola.tscn" id="2_qfw4h"]
-[ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="2_scb3r"]
-=======
-[ext_resource type="PackedScene" uid="uid://dq7qxcm2dm1b2" path="res://jugador.tscn" id="1_43avb"]
-[ext_resource type="PackedScene" uid="uid://d2ibegpg3o408" path="res://bola.tscn" id="2_qfw4h"]
->>>>>>> 8667d11a24c878ee40905900326e7b951554320c
+[ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="1_kois6"]
+[ext_resource type="PackedScene" uid="uid://d2ibegpg3o408" path="res://Scenes/bola.tscn" id="2_c8nnm"]
+[ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/Jugador.tscn" id="3_c8nnm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq8aq"]
-size = Vector2(1151, 20)
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxqpb"]
+bounce = 0.5
+absorbent = true
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_51fql"]
-size = Vector2(29, 668)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvach"]
+size = Vector2(1156, 24)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfvix"]
-size = Vector2(1181, 20)
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hcel0"]
+bounce = 0.5
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fi5v2"]
-size = Vector2(687.0022, 39.47473)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ktiw"]
+size = Vector2(40, 643)
 
-[node name="caja" type="Node2D" unique_id=1262196176]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r8gjj"]
+bounce = 0.5
 
-[node name="AreaArriba" type="Area2D" parent="." unique_id=1462230044]
-collision_layer = 0
-collision_mask = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6f14"]
+size = Vector2(663.9077, 20)
 
-[node name="CollisionShapaArriba" type="CollisionShape2D" parent="AreaArriba" unique_id=747757306]
-position = Vector2(575.5, -10)
-shape = SubResource("RectangleShape2D_mq8aq")
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_32phj"]
+bounce = 0.5
 
-[node name="AreaIzquierda" type="Area2D" parent="." unique_id=1752987586]
-collision_layer = 0
-collision_mask = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcu6l"]
+size = Vector2(1185, 32)
 
-[node name="CollisionShapeAbajo" type="CollisionShape2D" parent="AreaIzquierda" unique_id=376377069]
-position = Vector2(-14.5, 314)
-shape = SubResource("RectangleShape2D_51fql")
+[node name="caja" type="Node2D" unique_id=1774640746]
 
-[node name="AreaAbajo" type="Area2D" parent="." unique_id=1737722729]
-collision_layer = 0
-collision_mask = 2
+[node name="Background" type="Sprite2D" parent="." unique_id=734344677]
+position = Vector2(569, 327)
+scale = Vector2(0.6166666, 0.6444444)
+texture = ExtResource("1_kois6")
 
-[node name="CollisionShapeAbajo" type="CollisionShape2D" parent="AreaAbajo" unique_id=897321330]
-position = Vector2(561.5, 658)
-shape = SubResource("RectangleShape2D_kfvix")
+[node name="StaticBodyArriba" type="StaticBody2D" parent="." unique_id=1816130956]
+physics_material_override = SubResource("PhysicsMaterial_vxqpb")
 
-[node name="AreaDerecha" type="Area2D" parent="." unique_id=304160560]
-collision_layer = 0
-collision_mask = 2
+[node name="CollisionShapeArriba" type="CollisionShape2D" parent="StaticBodyArriba" unique_id=449875457]
+position = Vector2(575, -10)
+shape = SubResource("RectangleShape2D_fvach")
 
-[node name="CollisionShapeDerecha" type="CollisionShape2D" parent="AreaDerecha" unique_id=1071897639]
-position = Vector2(1171.2467, 323.49966)
-rotation = 1.5693554
-shape = SubResource("RectangleShape2D_fi5v2")
+[node name="StaticBodyIzq" type="StaticBody2D" parent="." unique_id=2135631851]
+physics_material_override = SubResource("PhysicsMaterial_hcel0")
 
-[node name="jugador" parent="." unique_id=1410336467 instance=ExtResource("1_43avb")]
+[node name="CollisionShapeIzq" type="CollisionShape2D" parent="StaticBodyIzq" unique_id=1809553558]
+position = Vector2(-19, 323)
+shape = SubResource("RectangleShape2D_6ktiw")
 
-[node name="bola" parent="." unique_id=1359927917 instance=ExtResource("2_qfw4h")]
-<<<<<<< HEAD
+[node name="StaticBodyDerecha" type="StaticBody2D" parent="." unique_id=902863653]
+physics_material_override = SubResource("PhysicsMaterial_r8gjj")
 
-[connection signal="body_entered" from="AreaArriba" to="." method="_on_area_arriba_body_entered"]
-[connection signal="body_entered" from="AreaIzquierda" to="." method="_on_area_izquierda_body_entered"]
-[connection signal="body_entered" from="AreaAbajo" to="." method="_on_area_abajo_body_entered"]
-[connection signal="body_entered" from="AreaDerecha" to="." method="_on_area_derecha_body_entered"]
-=======
->>>>>>> 8667d11a24c878ee40905900326e7b951554320c
+[node name="CollisionShapeDerecha" type="CollisionShape2D" parent="StaticBodyDerecha" unique_id=833913124]
+position = Vector2(1161, 318.99997)
+rotation = 1.5747565
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_u6f14")
+
+[node name="StaticBodyAbajo" type="StaticBody2D" parent="." unique_id=1010053729]
+physics_material_override = SubResource("PhysicsMaterial_32phj")
+
+[node name="CollisionShapeAbajo" type="CollisionShape2D" parent="StaticBodyAbajo" unique_id=422172259]
+position = Vector2(567.5, 661)
+shape = SubResource("RectangleShape2D_dcu6l")
+
+[node name="jugador" parent="." unique_id=1778729049 instance=ExtResource("3_c8nnm")]
+
+[node name="bola" parent="." unique_id=1359927917 instance=ExtResource("2_c8nnm")]
+position = Vector2(555, 418)
+gravity_scale = 0.523
