@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2ibegpg3o408"]
 
 [ext_resource type="Texture2D" uid="uid://c2c0g7hr5fsn0" path="res://Assets/Default/ballGrey.png" id="1_17s4t"]
+[ext_resource type="Script" uid="uid://c7bhbcgo8iv11" path="res://Scripts/Bola.gd" id="2_5mbwn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ro7k"]
 friction = 0.0
@@ -13,10 +14,12 @@ radius = 23.086792
 mass = 3.094
 physics_material_override = SubResource("PhysicsMaterial_8ro7k")
 gravity_scale = 3.453
+script = ExtResource("2_5mbwn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=885942004]
-scale = Vector2(2.035038, 1.9895834)
+scale = Vector2(0.9635078, 0.94198686)
 texture = ExtResource("1_17s4t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1728473817]
+scale = Vector2(0.47345936, 0.47345936)
 shape = SubResource("CircleShape2D_fi5v2")

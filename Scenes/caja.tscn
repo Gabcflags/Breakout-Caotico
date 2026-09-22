@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="1_kois6"]
 [ext_resource type="PackedScene" uid="uid://d2ibegpg3o408" path="res://Scenes/bola.tscn" id="2_c8nnm"]
-[ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/Jugador.tscn" id="3_c8nnm"]
+[ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/jugador.tscn" id="3_c8nnm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxqpb"]
 bounce = 0.5
@@ -69,5 +69,5 @@ shape = SubResource("RectangleShape2D_dcu6l")
 [node name="jugador" parent="." unique_id=1778729049 instance=ExtResource("3_c8nnm")]
 
 [node name="bola" parent="." unique_id=1359927917 instance=ExtResource("2_c8nnm")]
-position = Vector2(555, 418)
-gravity_scale = 0.523
+position = Vector2(550, 568)
+barra_path = NodePath("../jugador")
