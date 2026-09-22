@@ -16,6 +16,8 @@ physics_material_override = SubResource("PhysicsMaterial_8ro7k")
 gravity_scale = 5.901
 script = ExtResource("2_5mbwn")
 etiqueta_vidas = NodePath("CanvasLayer/Label")
+gravity_scale = 3.453
+script = ExtResource("2_5mbwn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=885942004]
 scale = Vector2(0.9635078, 0.94198686)
