@@ -10,9 +10,12 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_fi5v2"]
 radius = 23.086792
 
-[node name="bola" type="RigidBody2D" unique_id=1359927917]
-mass = 3.094
+[node name="bola" type="RigidBody2D" unique_id=1359927917 node_paths=PackedStringArray("etiqueta_vidas")]
+mass = 0.079
 physics_material_override = SubResource("PhysicsMaterial_8ro7k")
+gravity_scale = 5.901
+script = ExtResource("2_5mbwn")
+etiqueta_vidas = NodePath("CanvasLayer/Label")
 gravity_scale = 3.453
 script = ExtResource("2_5mbwn")
 
@@ -23,3 +26,13 @@ texture = ExtResource("1_17s4t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1728473817]
 scale = Vector2(0.47345936, 0.47345936)
 shape = SubResource("CircleShape2D_fi5v2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1473893005]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=285688520]
+offset_left = 19.0
+offset_top = 583.0
+offset_right = 130.0
+offset_bottom = 627.0
+theme_override_colors/font_color = Color(0.9137255, 0.9411765, 0, 1)
+theme_override_font_sizes/font_size = 31

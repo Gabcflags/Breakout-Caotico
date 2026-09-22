@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="1_kois6"]
 [ext_resource type="PackedScene" uid="uid://d2ibegpg3o408" path="res://Scenes/bola.tscn" id="2_c8nnm"]
+[ext_resource type="Script" uid="uid://c4xb3dp05gjin" path="res://Scripts/area_zona_muerte.gd" id="2_scb3r"]
 [ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/jugador.tscn" id="3_c8nnm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxqpb"]
@@ -23,17 +24,14 @@ bounce = 0.5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6f14"]
 size = Vector2(663.9077, 20)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_32phj"]
-bounce = 0.5
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcu6l"]
-size = Vector2(1185, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq8aq"]
+size = Vector2(1208, 20)
 
 [node name="caja" type="Node2D" unique_id=1774640746]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=734344677]
-position = Vector2(569, 327)
-scale = Vector2(0.6166666, 0.6444444)
+position = Vector2(586, 320)
+scale = Vector2(0.6078125, 0.60740745)
 texture = ExtResource("1_kois6")
 
 [node name="StaticBodyArriba" type="StaticBody2D" parent="." unique_id=1816130956]
@@ -59,15 +57,17 @@ rotation = 1.5747565
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_u6f14")
 
-[node name="StaticBodyAbajo" type="StaticBody2D" parent="." unique_id=1010053729]
-physics_material_override = SubResource("PhysicsMaterial_32phj")
+[node name="AreaZonaMuerte" type="Area2D" parent="." unique_id=508094312]
+script = ExtResource("2_scb3r")
 
-[node name="CollisionShapeAbajo" type="CollisionShape2D" parent="StaticBodyAbajo" unique_id=422172259]
-position = Vector2(567.5, 661)
-shape = SubResource("RectangleShape2D_dcu6l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaZonaMuerte" unique_id=1099747617]
+position = Vector2(565, 655)
+shape = SubResource("RectangleShape2D_mq8aq")
 
 [node name="jugador" parent="." unique_id=1778729049 instance=ExtResource("3_c8nnm")]
 
 [node name="bola" parent="." unique_id=1359927917 instance=ExtResource("2_c8nnm")]
 position = Vector2(550, 568)
+
+[connection signal="body_entered" from="AreaZonaMuerte" to="AreaZonaMuerte" method="_on_body_entered"]
 barra_path = NodePath("../jugador")
