@@ -1,23 +1,19 @@
-<<<<<<< HEAD
-[gd_scene format=3 uid="uid://5mevh4s7cpy1"]
+[gd_scene format=3 uid="uid://dplupseefaywl"]
 
-[ext_resource type="Script" uid="uid://vajvwmvfhci6" path="res://Scripts/jugador.gd" id="1_5ydob"]
-=======
-[gd_scene format=3 uid="uid://dq7qxcm2dm1b2"]
->>>>>>> 8667d11a24c878ee40905900326e7b951554320c
+[ext_resource type="Script" uid="uid://dbhrydxj7h4x4" path="res://Scripts/jugador.gd" id="1_5jqxn"]
+[ext_resource type="Texture2D" uid="uid://dvfs48wr4kpym" path="res://Assets/Default/element_grey_rectangle_glossy.png" id="2_na3lr"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_mq8aq"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq8aq"]
+size = Vector2(175.5, 20.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_51fql"]
-size = Vector2(90, 18)
+[node name="jugador" type="CharacterBody2D" unique_id=1778729049]
+position = Vector2(555, 600)
+script = ExtResource("1_5jqxn")
 
-[node name="jugador" type="CharacterBody2D" unique_id=1410336467]
-position = Vector2(548, 589)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1445169478]
+position = Vector2(1.0000231, 2.0742416e-05)
+scale = Vector2(2.7500002, 0.6875007)
+texture = ExtResource("2_na3lr")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=680156695]
-position = Vector2(4.7683716e-07, 9.536743e-07)
-scale = Vector2(90.000015, 18.000002)
-texture = SubResource("CanvasTexture_mq8aq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1077960990]
-shape = SubResource("RectangleShape2D_51fql")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=160128786]
+shape = SubResource("RectangleShape2D_mq8aq")

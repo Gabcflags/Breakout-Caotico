@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://d2ibegpg3o408"]
 
-[ext_resource type="Texture2D" uid="uid://mb1g4mq56gl7" path="res://kenney_simple-space/PNG/Default/meteor_large.png" id="1_c0eli"]
+[ext_resource type="Texture2D" uid="uid://c2c0g7hr5fsn0" path="res://Assets/Default/ballGrey.png" id="1_17s4t"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ro7k"]
+friction = 0.0
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fi5v2"]
 radius = 23.086792
 
 [node name="bola" type="RigidBody2D" unique_id=1359927917]
-position = Vector2(564, 332)
+mass = 3.094
+physics_material_override = SubResource("PhysicsMaterial_8ro7k")
+gravity_scale = 3.453
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=885942004]
-texture = ExtResource("1_c0eli")
+scale = Vector2(2.035038, 1.9895834)
+texture = ExtResource("1_17s4t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1728473817]
 shape = SubResource("CircleShape2D_fi5v2")
