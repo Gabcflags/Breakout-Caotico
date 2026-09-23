@@ -94,3 +94,6 @@ func _reiniciar_seguro() -> void:
 func actualizar_texto_vidas() -> void:
 	if etiqueta_vidas:
 		etiqueta_vidas.text = "Vidas: " + str(vidas)
+		
+		
+		###holaa
