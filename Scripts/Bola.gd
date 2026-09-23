@@ -28,25 +28,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 func _physics_process(_delta):
 	if not lanzada:
 		return
-@export var barra_path: NodePath
-@export var offset: Vector2 = Vector2(0, -20)
-
-var barra: Node2D
-var lanzada: bool = false
-
-func _ready():
-	barra = get_node(barra_path)
-	freeze = true
-	gravity_scale = 0
-	linear_damp = 0
-	angular_damp = 0
-
-func _physics_process(_delta):
-	if not lanzada:
-		global_position = barra.global_position + offset
-		return
-	
-	# Fuerza la magnitud de la velocidad a ser siempre constante
 	if linear_velocity.length() > 0:
 		linear_velocity = linear_velocity.normalized() * velocidad
 
@@ -94,6 +75,3 @@ func _reiniciar_seguro() -> void:
 func actualizar_texto_vidas() -> void:
 	if etiqueta_vidas:
 		etiqueta_vidas.text = "Vidas: " + str(vidas)
-		
-		
-		###holaa

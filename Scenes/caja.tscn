@@ -70,4 +70,3 @@ shape = SubResource("RectangleShape2D_mq8aq")
 position = Vector2(550, 568)
 
 [connection signal="body_entered" from="AreaZonaMuerte" to="AreaZonaMuerte" method="_on_body_entered"]
-barra_path = NodePath("../jugador")

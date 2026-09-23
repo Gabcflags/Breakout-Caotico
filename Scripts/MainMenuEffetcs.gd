@@ -40,6 +40,3 @@ func _process(delta):
 	luna.position = luna.position.lerp(destino_luna, t)
 
 	luna.rotation += delta * rotacion_luna
-
-
-###hola
