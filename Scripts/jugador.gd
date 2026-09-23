@@ -27,3 +27,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func reiniciar_posicion() -> void:
 	global_position = posicion_inicial
 	velocity = Vector2.ZERO
+
+###hola
