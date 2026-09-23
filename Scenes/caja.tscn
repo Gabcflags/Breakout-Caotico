@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqyqvv5071kuj"]
 
 [ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="1_kois6"]
+[ext_resource type="Script" uid="uid://cweyhb4njco0d" path="res://Scripts/caja.gd" id="1_tjjn2"]
 [ext_resource type="PackedScene" uid="uid://d2ibegpg3o408" path="res://Scenes/bola.tscn" id="2_c8nnm"]
 [ext_resource type="Script" uid="uid://c4xb3dp05gjin" path="res://Scripts/area_zona_muerte.gd" id="2_scb3r"]
 [ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/jugador.tscn" id="3_c8nnm"]
@@ -29,6 +30,7 @@ size = Vector2(663.9077, 20)
 size = Vector2(1208, 20)
 
 [node name="caja" type="Node2D" unique_id=1774640746]
+script = ExtResource("1_tjjn2")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=734344677]
 position = Vector2(586, 320)
@@ -74,5 +76,16 @@ position = Vector2(550, 568)
 espaciado = Vector2(140, 45)
 margen_superior = 30.0
 margen_izquierdo = 85.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1074717316]
+
+[node name="LabelPuntos" type="Label" parent="CanvasLayer" unique_id=2044979843]
+offset_left = 982.0
+offset_top = 585.0
+offset_right = 1121.0
+offset_bottom = 629.0
+theme_override_colors/font_color = Color(1, 1, 0.22745098, 1)
+theme_override_font_sizes/font_size = 31
+text = "Puntos: 0"
 
 [connection signal="body_entered" from="AreaZonaMuerte" to="AreaZonaMuerte" method="_on_body_entered"]
