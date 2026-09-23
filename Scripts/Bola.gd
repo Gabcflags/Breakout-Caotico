@@ -53,10 +53,8 @@ func perder_vida() -> void:
 		call_deferred("_reiniciar_seguro")
 	else:
 		print("¡Juego terminado!")
-		call_deferred("recargar_escena")
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
-func recargar_escena() -> void:
-	get_tree().reload_current_scene()
 
 func _reiniciar_seguro() -> void:
 	lanzada = false
