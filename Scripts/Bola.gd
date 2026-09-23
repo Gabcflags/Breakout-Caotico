@@ -9,6 +9,7 @@ var lanzada: bool = false
 var vidas: int = 3
 
 func _ready():
+	add_to_group("bola")
 	freeze_mode = RigidBody2D.FREEZE_MODE_KINEMATIC
 
 	barra = get_tree().get_first_node_in_group("barra")

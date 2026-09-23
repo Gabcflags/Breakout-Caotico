@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ibegpg3o408" path="res://Scenes/bola.tscn" id="2_c8nnm"]
 [ext_resource type="Script" uid="uid://c4xb3dp05gjin" path="res://Scripts/area_zona_muerte.gd" id="2_scb3r"]
 [ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/jugador.tscn" id="3_c8nnm"]
+[ext_resource type="PackedScene" uid="uid://dvki0ei42n5nn" path="res://Scenes/Generador.tscn" id="5_wonqo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxqpb"]
 bounce = 0.5
@@ -68,5 +69,10 @@ shape = SubResource("RectangleShape2D_mq8aq")
 
 [node name="bola" parent="." unique_id=1359927917 instance=ExtResource("2_c8nnm")]
 position = Vector2(550, 568)
+
+[node name="Generador" parent="." unique_id=1975816963 instance=ExtResource("5_wonqo")]
+espaciado = Vector2(140, 45)
+margen_superior = 30.0
+margen_izquierdo = 85.0
 
 [connection signal="body_entered" from="AreaZonaMuerte" to="AreaZonaMuerte" method="_on_body_entered"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dvki0ei42n5nn"]
+
+[ext_resource type="Script" uid="uid://bdmdsodb724vq" path="res://Scripts/GeneradorBloques.gd" id="1_vfncf"]
+[ext_resource type="PackedScene" uid="uid://gcqk7vxco47o" path="res://Scenes/Bloque.tscn" id="2_lnb0f"]
+
+[node name="Generador" type="Node2D" unique_id=1975816963]
+script = ExtResource("1_vfncf")
+escena_bloque = ExtResource("2_lnb0f")
