@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://2kvtfw44xlhs"]
+
+[ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="1_uib17"]
+[ext_resource type="FontFile" uid="uid://cqfsroobb1qdn" path="res://Assets/Textures/Fonts/DeathStar-VmWB.ttf" id="2_k52d1"]
+
+[sub_resource type="FontVariation" id="FontVariation_fi5v2"]
+base_font = ExtResource("2_k52d1")
+
+[sub_resource type="SystemFont" id="SystemFont_51fql"]
+
+[sub_resource type="SystemFont" id="SystemFont_dcu6l"]
+
+[node name="over" type="Node2D" unique_id=1774640746]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=734344677]
+position = Vector2(586, 320)
+scale = Vector2(0.6078125, 0.60740745)
+texture = ExtResource("1_uib17")
+
+[node name="Label" type="Label" parent="." unique_id=839739109]
+offset_left = 446.0
+offset_top = 258.0
+offset_right = 745.0
+offset_bottom = 354.0
+theme_override_fonts/font = SubResource("FontVariation_fi5v2")
+theme_override_font_sizes/font_size = 52
+text = "GAME OVER"
+
+[node name="Control" type="Control" parent="." unique_id=1234843679]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RETURN" type="Button" parent="Control" unique_id=253720332]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 351.0
+offset_right = 677.0
+offset_bottom = 413.0
+theme_override_fonts/font = SubResource("SystemFont_51fql")
+theme_override_font_sizes/font_size = 21
+text = "volver al inicio"
+
+[node name="RETRY" type="Button" parent="Control" unique_id=315467597]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 436.0
+offset_right = 682.0
+offset_bottom = 492.0
+theme_override_fonts/font = SubResource("SystemFont_dcu6l")
+theme_override_font_sizes/font_size = 21
+text = "Volver a jugar"
