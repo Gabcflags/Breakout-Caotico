@@ -8,15 +8,24 @@ var barra: Node2D
 var lanzada: bool = false
 var vidas: int = 3
 
+var velocidad_actual: float
+var efecto_velocidad_activo: bool = false
+
 func _ready():
 	add_to_group("bola")
 	freeze_mode = RigidBody2D.FREEZE_MODE_KINEMATIC
+
+	# Evita que a velocidades altas (power-up de velocidad) la bola
+	# atraviese paredes/bloques sin que se detecte la colisión.
+	continuous_cd = RigidBody2D.CCD_MODE_CAST_SHAPE
+
+	velocidad_actual = velocidad
 
 	barra = get_tree().get_first_node_in_group("barra")
 
 	if not barra:
 		print("¡ERROR: No se encontró ningún nodo en el grupo 'barra'!")
-	
+
 	_reiniciar_seguro()
 	actualizar_texto_vidas()
 
@@ -30,7 +39,7 @@ func _physics_process(_delta):
 	if not lanzada:
 		return
 	if linear_velocity.length() > 0:
-		linear_velocity = linear_velocity.normalized() * velocidad
+		linear_velocity = linear_velocity.normalized() * velocidad_actual
 
 func _unhandled_input(event: InputEvent) -> void:
 	if lanzada:
@@ -43,12 +52,12 @@ func lanzar() -> void:
 	freeze = false
 	var angulo_grados = randf_range(-60.0, 60.0)
 	var direccion = Vector2(sin(deg_to_rad(angulo_grados)), -cos(deg_to_rad(angulo_grados)))
-	linear_velocity = direccion.normalized() * velocidad
+	linear_velocity = direccion.normalized() * velocidad_actual
 
 func perder_vida() -> void:
 	vidas -= 1
 	actualizar_texto_vidas()
-	
+
 	if vidas > 0:
 		call_deferred("_reiniciar_seguro")
 	else:
@@ -74,3 +83,15 @@ func _reiniciar_seguro() -> void:
 func actualizar_texto_vidas() -> void:
 	if etiqueta_vidas:
 		etiqueta_vidas.text = "Vidas: " + str(vidas)
+
+# --- Efecto de power-up de velocidad ---
+func aplicar_multiplicador_velocidad(multiplicador: float, duracion: float) -> void:
+	velocidad_actual = velocidad * multiplicador
+	efecto_velocidad_activo = true
+
+	await get_tree().create_timer(duracion).timeout
+
+	# Solo vuelve a la velocidad base si nadie volvió a aplicar el efecto mientras tanto
+	if efecto_velocidad_activo:
+		velocidad_actual = velocidad
+		efecto_velocidad_activo = false

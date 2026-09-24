@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dplupseefaywl" path="res://Scenes/jugador.tscn" id="3_c8nnm"]
 [ext_resource type="PackedScene" uid="uid://dvki0ei42n5nn" path="res://Scenes/Generador.tscn" id="5_wonqo"]
 [ext_resource type="PackedScene" uid="uid://cbhb4oei1i0vf" path="res://Scenes/BloqueEspecial.tscn" id="7_neyc2"]
+[ext_resource type="PackedScene" uid="uid://dlih71rbiy3wa" path="res://Scenes/BloqueEspecialAlargador.tscn" id="8_vtb1t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxqpb"]
 bounce = 0.5
@@ -75,6 +76,7 @@ position = Vector2(550, 568)
 
 [node name="Generador" parent="." unique_id=1975816963 instance=ExtResource("5_wonqo")]
 bloque_especial_scene = ExtResource("7_neyc2")
+bloque_alargador_scene = ExtResource("8_vtb1t")
 espaciado = Vector2(140, 45)
 margen_superior = 30.0
 margen_izquierdo = 85.0
@@ -82,9 +84,9 @@ margen_izquierdo = 85.0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1074717316]
 
 [node name="LabelPuntos" type="Label" parent="CanvasLayer" unique_id=2044979843]
-offset_left = 982.0
+offset_left = 904.0
 offset_top = 585.0
-offset_right = 1121.0
+offset_right = 1043.0
 offset_bottom = 629.0
 theme_override_colors/font_color = Color(1, 1, 0.22745098, 1)
 theme_override_font_sizes/font_size = 31

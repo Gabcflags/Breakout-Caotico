@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cbhb4oei1i0vf"]
+[gd_scene format=3 uid="uid://dlih71rbiy3wa"]
 
-[ext_resource type="Script" uid="uid://dq4r1jgw6xqv8" path="res://Scripts/bloque_especial.gd" id="1_8118j"]
-[ext_resource type="Texture2D" uid="uid://becj0mcl6yw0r" path="res://Assets/Default/element_red_rectangle.png" id="2_8118j"]
+[ext_resource type="Script" uid="uid://bvgrdcusrddck" path="res://Scripts/bloque_especial_alargador.gd" id="1_xeuia"]
+[ext_resource type="Texture2D" uid="uid://b7njc32wql1d5" path="res://Assets/Default/element_green_rectangle_glossy.png" id="2_xeuia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
 size = Vector2(120, 34)
@@ -9,14 +9,13 @@ size = Vector2(120, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykh0f"]
 size = Vector2(120, 34)
 
-[node name="BloqueEspecial" type="StaticBody2D" unique_id=462199605]
+[node name="BloqueEspecialAlargadort" type="StaticBody2D" unique_id=462199605]
 scale = Vector2(1.1183915, 1.1731659)
-script = ExtResource("1_8118j")
-multiplicador_velocidad = 1.3
+script = ExtResource("1_xeuia")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=697410043]
 scale = Vector2(1.8399997, 1)
-texture = ExtResource("2_8118j")
+texture = ExtResource("2_xeuia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831815221]
 scale = Vector2(0.99317634, 1.0068535)
