@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c2c0g7hr5fsn0" path="res://Assets/Default/ballGrey.png" id="1_17s4t"]
 [ext_resource type="Script" uid="uid://c7bhbcgo8iv11" path="res://Scripts/Bola.gd" id="2_5mbwn"]
+[ext_resource type="Texture2D" uid="uid://bvdn3psffkqf8" path="res://Assets/Default/particleCartoonStar.png" id="3_p4edv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ro7k"]
 friction = 0.0
@@ -9,6 +10,14 @@ bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fi5v2"]
 radius = 23.086792
+
+[sub_resource type="Curve" id="Curve_kfvix"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.37711865, 0.097345114), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_p4edv"]
+offsets = PackedFloat32Array(0, 0.5492611, 0.682266, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.84059507, 0.84059507, 0.84059507, 1, 0.8990148, 0.8990148, 0.8990148, 1, 1, 1, 1, 1)
 
 [node name="bola" type="RigidBody2D" unique_id=1359927917 node_paths=PackedStringArray("etiqueta_vidas")]
 mass = 0.079
@@ -34,3 +43,13 @@ offset_right = 130.0
 offset_bottom = 627.0
 theme_override_colors/font_color = Color(0.9137255, 0.9411765, 0, 1)
 theme_override_font_sizes/font_size = 31
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1151632449]
+amount = 100
+texture = ExtResource("3_p4edv")
+emission_shape = 1
+emission_sphere_radius = 12.72
+scale_amount_min = 0.02
+scale_amount_curve = SubResource("Curve_kfvix")
+color = Color(0.48219773, 0.3332212, 0.99969536, 1)
+color_initial_ramp = SubResource("Gradient_p4edv")

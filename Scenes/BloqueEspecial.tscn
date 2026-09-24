@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cbhb4oei1i0vf"]
+
+[ext_resource type="Script" uid="uid://dq4r1jgw6xqv8" path="res://Scripts/bloque_especial.gd" id="1_8118j"]
+[ext_resource type="Texture2D" uid="uid://becj0mcl6yw0r" path="res://Assets/Default/element_red_rectangle.png" id="2_8118j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
+size = Vector2(120, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykh0f"]
+size = Vector2(120, 34)
+
+[node name="BloqueEspecial" type="StaticBody2D" unique_id=462199605]
+scale = Vector2(1.1183915, 1.1731659)
+script = ExtResource("1_8118j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=697410043]
+scale = Vector2(1.8399997, 1)
+texture = ExtResource("2_8118j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831815221]
+scale = Vector2(0.99317634, 1.0068535)
+shape = SubResource("RectangleShape2D_qmg03")
+
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=1602723304]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=233259445]
+shape = SubResource("RectangleShape2D_ykh0f")
+
+[connection signal="body_entered" from="AreaDeteccion" to="." method="_on_area_deteccion_body_entered"]

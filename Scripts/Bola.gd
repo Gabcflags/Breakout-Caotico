@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var velocidad: float = 550.0
+@export var velocidad: float = 400.0
 @export var offset: Vector2 = Vector2(0, -20)
 @export var etiqueta_vidas: Label
 

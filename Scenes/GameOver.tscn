@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://2kvtfw44xlhs"]
 
+[ext_resource type="Script" uid="uid://ccj61u8pbaiir" path="res://Scripts/game_over.gd" id="1_ktc4i"]
 [ext_resource type="Texture2D" uid="uid://c8oo4b8q5oru1" path="res://Assets/Textures/UI/background.jpg" id="1_uib17"]
 [ext_resource type="FontFile" uid="uid://cqfsroobb1qdn" path="res://Assets/Textures/Fonts/DeathStar-VmWB.ttf" id="2_k52d1"]
 
@@ -11,6 +12,7 @@ base_font = ExtResource("2_k52d1")
 [sub_resource type="SystemFont" id="SystemFont_dcu6l"]
 
 [node name="over" type="Node2D" unique_id=1774640746]
+script = ExtResource("1_ktc4i")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=734344677]
 position = Vector2(586, 320)
@@ -51,3 +53,6 @@ offset_bottom = 492.0
 theme_override_fonts/font = SubResource("SystemFont_dcu6l")
 theme_override_font_sizes/font_size = 21
 text = "Volver a jugar"
+
+[connection signal="pressed" from="Control/RETURN" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Control/RETRY" to="." method="_on_retry_pressed"]
