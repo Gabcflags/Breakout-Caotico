@@ -4,6 +4,7 @@ extends RigidBody2D
 @export var offset: Vector2 = Vector2(0, -20)
 @export var etiqueta_vidas: Label
 
+
 var barra: Node2D
 var lanzada: bool = false
 var vidas: int = 3

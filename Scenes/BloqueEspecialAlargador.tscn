@@ -2,12 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bvgrdcusrddck" path="res://Scripts/bloque_especial_alargador.gd" id="1_xeuia"]
 [ext_resource type="Texture2D" uid="uid://b7njc32wql1d5" path="res://Assets/Default/element_green_rectangle_glossy.png" id="2_xeuia"]
+[ext_resource type="Texture2D" uid="uid://dhtcjg2x402yn" path="res://Assets/Default/element_green_diamond.png" id="3_f8bvn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
 size = Vector2(120, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykh0f"]
 size = Vector2(120, 34)
+
+[sub_resource type="Curve" id="Curve_mq8aq"]
+_data = [Vector2(0, 0.5309735), 0.0, 0.0, 0, 0, Vector2(0.5169492, 0.017699122), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="BloqueEspecialAlargadort" type="StaticBody2D" unique_id=462199605]
 scale = Vector2(1.1183915, 1.1731659)
@@ -25,5 +30,18 @@ shape = SubResource("RectangleShape2D_qmg03")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=233259445]
 shape = SubResource("RectangleShape2D_ykh0f")
+
+[node name="Particulas" type="CPUParticles2D" parent="." unique_id=336611222]
+emitting = false
+amount = 25
+texture = ExtResource("3_f8bvn")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+spread = 180.0
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_curve = SubResource("Curve_mq8aq")
 
 [connection signal="body_entered" from="AreaDeteccion" to="." method="_on_area_deteccion_body_entered"]

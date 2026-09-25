@@ -4,6 +4,7 @@ extends StaticBody2D
 @export var resistencia: int = 1
 @export var multiplicador_tamano: float = 1.6
 @export var duracion_efecto: float = 10.0
+@onready var particulas: CPUParticles2D = $Particulas
 
 var golpes_recibidos: int = 0
 
@@ -26,4 +27,9 @@ func aplicar_efecto_alargar() -> void:
 		barra.agrandar(multiplicador_tamano, duracion_efecto)
 
 func destruir() -> void:
+	
+	if has_node("Sprite2D"):
+		$Sprite2D.visible = false
+	particulas.emitting = true
+	await get_tree().create_timer(particulas.lifetime).timeout
 	queue_free()
