@@ -25,6 +25,7 @@ func actualizar_visual() -> void:
 	modulate.a = clamp(vida_restante, alpha_minimo, 1.0)
 
 func destruir() -> void:
+	GestorSonidos.reproducir_romper()
 
 	if has_node("Sprite2D"):
 		$Sprite2D.visible = false

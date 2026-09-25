@@ -29,9 +29,11 @@ func actualizar_visual() -> void:
 
 func aplicar_efecto_velocidad(bola: Node2D) -> void:
 	if bola.has_method("aplicar_multiplicador_velocidad"):
+		GestorSonidos.reproducir_powerup()
 		bola.aplicar_multiplicador_velocidad(multiplicador_velocidad, duracion_efecto)
 		
 func destruir() -> void:
+	GestorSonidos.reproducir_romper()
 
 	if has_node("Sprite2D"):
 		$Sprite2D.visible = false

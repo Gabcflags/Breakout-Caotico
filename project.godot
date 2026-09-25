@@ -18,6 +18,7 @@ config/icon="res://Assets/Textures/icon.svg"
 [autoload]
 
 PuntajeGlobal="*uid://cnltmrkqahuyb"
+GestorSonidos="*uid://0r45putswmeu"
 
 [display]
 

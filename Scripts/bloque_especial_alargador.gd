@@ -24,10 +24,12 @@ func _on_area_deteccion_body_entered(body: Node2D) -> void:
 func aplicar_efecto_alargar() -> void:
 	var barra = get_tree().get_first_node_in_group("barra")
 	if barra and barra.has_method("agrandar"):
+		GestorSonidos.reproducir_powerup()
 		barra.agrandar(multiplicador_tamano, duracion_efecto)
 
 func destruir() -> void:
-	
+	GestorSonidos.reproducir_romper()
+
 	if has_node("Sprite2D"):
 		$Sprite2D.visible = false
 	particulas.emitting = true

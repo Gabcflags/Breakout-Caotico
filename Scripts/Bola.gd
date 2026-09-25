@@ -20,6 +20,13 @@ func _ready():
 	# atraviese paredes/bloques sin que se detecte la colisión.
 	continuous_cd = RigidBody2D.CCD_MODE_CAST_SHAPE
 
+	# Necesario para que el RigidBody2D emita la señal "body_entered"
+	# cada vez que choca con algo (paredes, barra, bloques) y así
+	# poder reproducir el sonido de rebote.
+	contact_monitor = true
+	max_contacts_reported = 4
+	body_entered.connect(_on_body_entered)
+
 	velocidad_actual = velocidad
 
 	barra = get_tree().get_first_node_in_group("barra")
@@ -29,6 +36,12 @@ func _ready():
 
 	_reiniciar_seguro()
 	actualizar_texto_vidas()
+
+func _on_body_entered(_body: Node) -> void:
+	# Solo suena si la bola ya está en juego (evita ruido falso
+	# mientras está "pegada" a la barra antes de lanzarla).
+	if lanzada:
+		GestorSonidos.reproducir_rebote()
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if not lanzada and barra:
