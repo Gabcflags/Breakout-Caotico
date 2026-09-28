@@ -84,10 +84,10 @@ margen_izquierdo = 85.0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1074717316]
 
 [node name="LabelPuntos" type="Label" parent="CanvasLayer" unique_id=2044979843]
-offset_left = 904.0
-offset_top = 585.0
-offset_right = 1043.0
-offset_bottom = 629.0
+offset_left = 735.0
+offset_top = 568.0
+offset_right = 874.0
+offset_bottom = 612.0
 theme_override_colors/font_color = Color(1, 1, 0.22745098, 1)
 theme_override_font_sizes/font_size = 31
 text = "Puntos: 0"

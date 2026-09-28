@@ -76,6 +76,7 @@ func perder_vida() -> void:
 		call_deferred("_reiniciar_seguro")
 	else:
 		print("¡Juego terminado!")
+		PuntajeGlobal.terminar_partida()
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 
