@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dqy5ajk707pmf"]
+
+[ext_resource type="Script" uid="uid://dcv6vqn0rn6x2" path="res://Scripts/bola_extra.gd" id="1_ba3pc"]
+[ext_resource type="Texture2D" uid="uid://d4cxd6ysu321o" path="res://Assets/Default/ballBlue.png" id="2_ba3pc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ba3pc"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_51fql"]
+radius = 12.0
+
+[node name="BolaExtra" type="RigidBody2D" unique_id=1908555985]
+physics_material_override = SubResource("PhysicsMaterial_ba3pc")
+gravity_scale = 0.0
+script = ExtResource("1_ba3pc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=577237918]
+texture = ExtResource("2_ba3pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1005805157]
+shape = SubResource("CircleShape2D_51fql")

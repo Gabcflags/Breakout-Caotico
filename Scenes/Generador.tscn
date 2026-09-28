@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bdmdsodb724vq" path="res://Scripts/GeneradorBloques.gd" id="1_vfncf"]
 [ext_resource type="PackedScene" uid="uid://gcqk7vxco47o" path="res://Scenes/Bloque.tscn" id="2_lnb0f"]
+[ext_resource type="PackedScene" uid="uid://peb4ej0p5rhs" path="res://Scenes/BloqueMultibola.tscn" id="3_bkoll"]
 
 [node name="Generador" type="Node2D" unique_id=1975816963]
 script = ExtResource("1_vfncf")
 escena_bloque = ExtResource("2_lnb0f")
+escena_bloque_multibola = ExtResource("3_bkoll")

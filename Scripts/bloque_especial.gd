@@ -13,9 +13,9 @@ func _ready() -> void:
 	add_to_group("bloque_especial")
 
 func _on_area_deteccion_body_entered(body: Node2D) -> void:
-	if body.is_in_group("bola"):
+	if body.is_in_group("bola") or body.is_in_group("bola_extra"):
 		golpes_recibidos += 1
-
+		
 		if golpes_recibidos >= resistencia:
 			PuntajeGlobal.agregar_puntos(valor_puntos)
 			aplicar_efecto_velocidad(body)

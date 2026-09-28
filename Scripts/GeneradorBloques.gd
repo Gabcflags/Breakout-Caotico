@@ -3,6 +3,7 @@ extends Node2D
 @export var escena_bloque: PackedScene
 @export var bloque_especial_scene: PackedScene
 @export var bloque_alargador_scene: PackedScene
+@export var escena_bloque_multibola: PackedScene
 @export var filas: int = 5
 @export var columnas: int = 8
 @export var espaciado: Vector2 = Vector2(80, 30)
@@ -10,6 +11,7 @@ extends Node2D
 @export var margen_izquierdo: float = 60.0
 @export_range(0.0, 1.0) var probabilidad_especial: float = 0.2
 @export_range(0.0, 1.0) var probabilidad_alargador: float = 0.1
+@export_range(0, 100) var probabilidad_multibola: float = 0.3
 
 func _ready() -> void:
 	generar_bloques()
@@ -24,6 +26,9 @@ func generar_bloques() -> void:
 				escena_a_usar = bloque_alargador_scene
 			elif tirada < probabilidad_alargador + probabilidad_especial:
 				escena_a_usar = bloque_especial_scene
+			elif tirada < probabilidad_alargador + probabilidad_especial + probabilidad_multibola:
+				if escena_bloque_multibola:
+					escena_a_usar = escena_bloque_multibola
 
 			var nuevo_bloque = escena_a_usar.instantiate()
 			nuevo_bloque.global_position = Vector2(
