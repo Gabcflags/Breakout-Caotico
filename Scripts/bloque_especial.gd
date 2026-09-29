@@ -10,6 +10,7 @@ extends StaticBody2D
 var golpes_recibidos: int = 0
 
 func _ready() -> void:
+
 	add_to_group("bloque_especial")
 
 func _on_area_deteccion_body_entered(body: Node2D) -> void:
@@ -40,3 +41,7 @@ func destruir() -> void:
 	particulas.emitting = true
 	await get_tree().create_timer(particulas.lifetime).timeout
 	queue_free()
+	var generador = get_tree().get_first_node_in_group("generador_bloques")
+	if generador and generador.has_method("verificar_fin_de_nivel"):
+		generador.verificar_fin_de_nivel()
+	

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvki0ei42n5nn" path="res://Scenes/Generador.tscn" id="5_wonqo"]
 [ext_resource type="PackedScene" uid="uid://cbhb4oei1i0vf" path="res://Scenes/BloqueEspecial.tscn" id="7_neyc2"]
 [ext_resource type="PackedScene" uid="uid://dlih71rbiy3wa" path="res://Scenes/BloqueEspecialAlargador.tscn" id="8_vtb1t"]
+[ext_resource type="Script" uid="uid://8i71gb37aacl" path="res://Scripts/camera_2d.gd" id="9_lpgjr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxqpb"]
 bounce = 0.5
@@ -91,5 +92,9 @@ offset_bottom = 612.0
 theme_override_colors/font_color = Color(1, 1, 0.22745098, 1)
 theme_override_font_sizes/font_size = 31
 text = "Puntos: 0"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1593928234]
+position = Vector2(574, 321)
+script = ExtResource("9_lpgjr")
 
 [connection signal="body_entered" from="AreaZonaMuerte" to="AreaZonaMuerte" method="_on_body_entered"]

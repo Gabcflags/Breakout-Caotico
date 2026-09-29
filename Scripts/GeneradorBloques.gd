@@ -14,6 +14,7 @@ extends Node2D
 @export_range(0, 100) var probabilidad_multibola: float = 0.3
 
 func _ready() -> void:
+	add_to_group("generador_bloques")
 	generar_bloques()
 
 func generar_bloques() -> void:
@@ -36,3 +37,22 @@ func generar_bloques() -> void:
 				margen_superior + fila * espaciado.y
 			)
 			add_child(nuevo_bloque)
+			
+			
+func verificar_fin_de_nivel() -> void:
+	# Esperamos un fotograma para que Godot termine de remover el bloque de la memoria
+	await get_tree().process_frame
+	
+	var bloques_restantes: int = get_tree().get_nodes_in_group("bloques").size()
+	var bloque_restante_especial : int = get_tree().get_nodes_in_group("bloque_especial").size()
+	var bloque_restante_alargador : int = get_tree().get_nodes_in_group("bloque_especial_alargador").size()
+	var bloque_restante_multibola : int =  get_tree().get_nodes_in_group("bloque_multibola").size()
+	
+	
+	if bloques_restantes <= 0 and bloque_restante_especial <= 0 and bloque_restante_multibola <= 0 and bloque_restante_alargador <=0:
+			activar_screenshake()
+
+func activar_screenshake() -> void:
+	var camara = get_tree().get_first_node_in_group("camara") as Camera2D
+	if camara and camara.has_method("sacudir"):
+		camara.sacudir(3.0)

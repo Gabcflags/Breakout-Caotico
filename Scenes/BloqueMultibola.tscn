@@ -12,7 +12,7 @@ size = Vector2(120, 34)
 size = Vector2(120, 34)
 
 [sub_resource type="Curve" id="Curve_mq8aq"]
-_data = [Vector2(0, 0.5309735), 0.0, 0.0, 0, 0, Vector2(0.5169492, 0.017699122), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.5309735), 0.0, 0.0, 0, 0, Vector2(0.44915253, 0.026548743), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="BloqueMultibola" type="StaticBody2D" unique_id=462199605]
