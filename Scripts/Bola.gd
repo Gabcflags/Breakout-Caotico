@@ -85,7 +85,11 @@ func perder_vida() -> void:
 		print("¡Juego terminado!")
 		PuntajeGlobal.terminar_partida()
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
-
+		
+func reiniciar_vidas(cantidad: int = 3) -> void:
+	vidas = cantidad
+	actualizar_texto_vidas()
+	
 func _reiniciar_seguro() -> void:
 	lanzada = false
 	freeze = true

@@ -165,6 +165,11 @@ func _pasar_al_siguiente_nivel() -> void:
 
 	var mult: float = minf(1.0 + (PuntajeGlobal.nivel - 1) * incremento_velocidad_por_nivel, multiplicador_velocidad_maximo)
 	var bola = get_tree().get_first_node_in_group("bola")
+	
+	if bola:
+		if bola.has_method("reiniciar_vidas"):
+			bola.reiniciar_vidas(3)
+	
 	if bola and bola.has_method("preparar_siguiente_nivel"):
 		bola.preparar_siguiente_nivel(mult)
 

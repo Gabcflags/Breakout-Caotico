@@ -16,7 +16,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.37711865, 0.097345114), 0.0, 0
 point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_p4edv"]
-offsets = PackedFloat32Array(0, 0.5492611, 0.682266, 1)
+offsets = PackedFloat32Array(0, 0.28325123, 0.682266, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.84059507, 0.84059507, 0.84059507, 1, 0.8990148, 0.8990148, 0.8990148, 1, 1, 1, 1, 1)
 
 [node name="bola" type="RigidBody2D" unique_id=1359927917 node_paths=PackedStringArray("etiqueta_vidas")]
@@ -51,5 +51,5 @@ emission_shape = 1
 emission_sphere_radius = 12.72
 scale_amount_min = 0.02
 scale_amount_curve = SubResource("Curve_kfvix")
-color = Color(0.48219773, 0.3332212, 0.99969536, 1)
+color = Color(0.9563665, 0.7309708, 0.21822596, 1)
 color_initial_ramp = SubResource("Gradient_p4edv")
