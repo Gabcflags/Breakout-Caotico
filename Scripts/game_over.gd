@@ -8,7 +8,7 @@ func _ready() -> void:
 	if PuntajeGlobal.es_nuevo_record:
 		label_record.text = "¡Nuevo récord! %d" % PuntajeGlobal.record
 	else:
-		label_record.text = "Récord: %d" % PuntajeGlobal.record
+		label_record.text = "Record: %d" % PuntajeGlobal.record
 
 func _on_return_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
