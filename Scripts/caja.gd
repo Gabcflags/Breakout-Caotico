@@ -6,4 +6,4 @@ func _ready() -> void:
 	PuntajeGlobal.reiniciar()
 
 func _process(_delta: float) -> void:
-	label_puntos.text = "Puntos: %d   Récord: %d" % [PuntajeGlobal.puntos, PuntajeGlobal.record]
+	label_puntos.text = "Nivel: %d   Puntos: %d   Récord: %d" % [PuntajeGlobal.nivel, PuntajeGlobal.puntos, PuntajeGlobal.record]

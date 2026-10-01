@@ -3,26 +3,22 @@ extends RigidBody2D
 @export var velocidad: float = 350.0
 @export var offset: Vector2 = Vector2(0, -20)
 @export var etiqueta_vidas: Label
-
+@export_range(5.0, 45.0) var angulo_minimo_grados: float = 20.0
 
 var barra: Node2D
 var lanzada: bool = false
 var vidas: int = 3
 
 var velocidad_actual: float
+var multiplicador_nivel: float = 1.0
 var efecto_velocidad_activo: bool = false
 
 func _ready():
 	add_to_group("bola")
 	freeze_mode = RigidBody2D.FREEZE_MODE_KINEMATIC
 
-	# Evita que a velocidades altas (power-up de velocidad) la bola
-	# atraviese paredes/bloques sin que se detecte la colisión.
 	continuous_cd = RigidBody2D.CCD_MODE_CAST_SHAPE
 
-	# Necesario para que el RigidBody2D emita la señal "body_entered"
-	# cada vez que choca con algo (paredes, barra, bloques) y así
-	# poder reproducir el sonido de rebote.
 	contact_monitor = true
 	max_contacts_reported = 4
 	body_entered.connect(_on_body_entered)
@@ -38,8 +34,6 @@ func _ready():
 	actualizar_texto_vidas()
 
 func _on_body_entered(_body: Node) -> void:
-	# Solo suena si la bola ya está en juego (evita ruido falso
-	# mientras está "pegada" a la barra antes de lanzarla).
 	if lanzada:
 		GestorSonidos.reproducir_rebote()
 
@@ -53,7 +47,20 @@ func _physics_process(_delta):
 	if not lanzada:
 		return
 	if linear_velocity.length() > 0:
-		linear_velocity = linear_velocity.normalized() * velocidad_actual
+		var dir: Vector2 = _corregir_angulo(linear_velocity.normalized())
+		linear_velocity = dir * velocidad_actual
+
+func _corregir_angulo(dir: Vector2) -> Vector2:
+	var min_y: float = sin(deg_to_rad(angulo_minimo_grados))
+	if absf(dir.y) >= min_y:
+		return dir
+	var signo_y: float = signf(dir.y)
+	if signo_y == 0.0:
+		signo_y = 1.0 if randf() < 0.5 else -1.0
+	var signo_x: float = signf(dir.x)
+	if signo_x == 0.0:
+		signo_x = 1.0
+	return Vector2(signo_x * sqrt(1.0 - min_y * min_y), signo_y * min_y)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if lanzada:
@@ -79,7 +86,6 @@ func perder_vida() -> void:
 		PuntajeGlobal.terminar_partida()
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
-
 func _reiniciar_seguro() -> void:
 	lanzada = false
 	freeze = true
@@ -99,14 +105,18 @@ func actualizar_texto_vidas() -> void:
 	if etiqueta_vidas:
 		etiqueta_vidas.text = "Vidas: " + str(vidas)
 
-# --- Efecto de power-up de velocidad ---
 func aplicar_multiplicador_velocidad(multiplicador: float, duracion: float) -> void:
-	velocidad_actual = velocidad * multiplicador
+	velocidad_actual = velocidad * multiplicador_nivel * multiplicador
 	efecto_velocidad_activo = true
 
 	await get_tree().create_timer(duracion).timeout
 
-	# Solo vuelve a la velocidad base si nadie volvió a aplicar el efecto mientras tanto
 	if efecto_velocidad_activo:
-		velocidad_actual = velocidad
+		velocidad_actual = velocidad * multiplicador_nivel
 		efecto_velocidad_activo = false
+
+func preparar_siguiente_nivel(multiplicador: float) -> void:
+	efecto_velocidad_activo = false
+	multiplicador_nivel = multiplicador
+	velocidad_actual = velocidad * multiplicador_nivel
+	call_deferred("_reiniciar_seguro")

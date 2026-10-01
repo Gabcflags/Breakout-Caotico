@@ -3,6 +3,7 @@ extends Node
 const RUTA_GUARDADO := "user://record.cfg"
 
 var puntos: int = 0
+var nivel: int = 1
 var record: int = 0
 var es_nuevo_record: bool = false
 
@@ -13,12 +14,11 @@ func agregar_puntos(cantidad: int) -> void:
 	puntos += cantidad
 	print("Puntos actuales: ", puntos)
 
-# Se llama al empezar una partida nueva
 func reiniciar() -> void:
 	puntos = 0
+	nivel = 1
 	es_nuevo_record = false
 
-# Se llama una sola vez cuando se acaban las vidas
 func terminar_partida() -> void:
 	if puntos > record:
 		record = puntos
